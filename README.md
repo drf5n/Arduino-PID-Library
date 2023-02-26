@@ -1,5 +1,5 @@
 ***************************************************************
-* Arduino PID Library - Version 1.2.2
+* Arduino PID Library - Version 1.2.3
 * by David Forrest <drf5na@gmail.com>  2023-02-24
 * by Brett Beauregard <br3ttb@gmail.com> brettbeauregard.com
 *
