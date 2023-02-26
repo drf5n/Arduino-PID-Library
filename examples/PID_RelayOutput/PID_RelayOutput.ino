@@ -14,7 +14,7 @@
  * window being "Relay Off Time"
  ********************************************************/
 
-#include <PID_v1.h>
+#include <PID_v1_bc.h> // https://github.com/drf5n/Arduino-PID-Library
 
 #define PIN_INPUT 0
 #define RELAY_PIN 6

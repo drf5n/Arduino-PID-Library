@@ -1,6 +1,7 @@
 /**********************************************************************************************
- * Arduino PID Library - Version 1.2.1
- * by Brett Beauregard <br3ttb@gmail.com> brettbeauregard.com
+ * Arduino PID Library with back calculation - Version 1.2.2
+ * by David Forrest <drf5na@gmail.com> 
+ * Brett Beauregard <br3ttb@gmail.com> brettbeauregard.com
  *
  * This Library is licensed under the MIT License
  **********************************************************************************************/
@@ -11,7 +12,7 @@
   #include "WProgram.h"
 #endif
 
-#include <PID_v1.h>
+#include <PID_v1_bc.h>
 
 /*Constructor (...)*********************************************************
  *    The parameters specified here are those for for which we can't set up

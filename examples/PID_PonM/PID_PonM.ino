@@ -6,7 +6,7 @@
  * in certain processes like sous-vides.
  ********************************************************/
 
-#include <PID_v1.h>
+#include <PID_v1_bc.h> // https://github.com/drf5n/Arduino-PID-Library
 
 //Define Variables we'll be connecting to
 double Setpoint, Input, Output;
