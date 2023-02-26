@@ -18,8 +18,19 @@ The back calculation should prevent integral windup be dynamically limiting the 
 from exceeding the limits.  Large errors far outside of the proportional range (error > MaxOutput/kP) will produce MaxOutput and 
 inhibit integral growth.
 
-See   
+Alternative libraries:
 
+* PID -- Brett Beauregard's well documented original uses static limits on integral windup or PonM scheme
+* QuickPID -- has several anti-windup forms
+* PID_RT -- Has anti-windup but Proportional-on-measurement
+
+
+See:
+*  https://en.wikipedia.org/wiki/PID_controller#Integral_windup -- overview of Integral Windup & common solutions
+*  https://en.wikipedia.org/wiki/Integral_windup -- overview of Integral Windup & common solutions
+* https://www.cds.caltech.edu/~murray/courses/cds101/fa02/caltech/astrom-ch6.pdf -- Textbook chaper with windup and backcalculation
+* https://controlguru.com/integral-reset-windup-jacketing-logic-and-the-velocity-pi-form/ -- good pics
+*  https://homepages.laas.fr/lzaccari/preprints/ZackEJC09.pdf -- A comprehensive paper on more complicated anti-windup schemes than backcalculation
 *  https://github.com/br3ttb/Arduino-PID-Library/pull/116 -- Pull request to the PID_v1 library
-*  https://github.com/br3ttb/Arduino-PID-Library/issues/76#issuecomment-1445273655
+*  https://github.com/br3ttb/Arduino-PID-Library/issues/76
 

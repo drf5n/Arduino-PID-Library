@@ -225,7 +225,9 @@ void PID::SetControllerDirection(int Direction)
  ******************************************************************************/
 double PID::GetKp(){ return  dispKp; }
 double PID::GetKi(){ return  dispKi;}
+double PID::GetTi(){ return  dispKp/dispKi;}
 double PID::GetKd(){ return  dispKd;}
+double PID::GetTd(){ return  dispKd/dispKp;}
 int PID::GetMode(){ return  inAuto ? AUTOMATIC : MANUAL;}
 int PID::GetDirection(){ return controllerDirection;}
 

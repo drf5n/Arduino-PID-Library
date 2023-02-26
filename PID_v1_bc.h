@@ -52,13 +52,14 @@ class PID
                                           //   the PID calculation is performed.  default is 100
 										  
 										  
-										  
   //Display functions ****************************************************************
 	double GetKp();						  // These functions query the pid for interal values.
 	double GetKi();						  //  they were created mainly for the pid front-end,
 	double GetKd();						  // where it's important to know what is actually 
 	int GetMode();						  //  inside the PID.
 	int GetDirection();					  //
+        double GetTi();
+        double GetTd();
 
   private:
 	void Initialize();
@@ -70,7 +71,6 @@ class PID
 	double kp;                  // * (P)roportional Tuning Parameter
     double ki;                  // * (I)ntegral Tuning Parameter
     double kd;                  // * (D)erivative Tuning Parameter
-
 	int controllerDirection;
 	int pOn;
 
