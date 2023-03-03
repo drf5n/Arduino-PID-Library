@@ -52,6 +52,9 @@ class PID
                                           //   the PID calculation is performed.  default is 100
 										  
 										  
+	void Initialize();		  // * bumpless update of internal variables.
+	double outputSum;		  // * internal integrator state for understanding and user-space control
+										  
   //Display functions ****************************************************************
 	double GetKp();						  // These functions query the pid for interal values.
 	double GetKi();						  //  they were created mainly for the pid front-end,
@@ -62,7 +65,6 @@ class PID
         double GetTd();
 
   private:
-	void Initialize();
 	
 	double dispKp;				// * we'll hold on to the tuning parameters in user-entered 
 	double dispKi;				//   format for display purposes
@@ -80,7 +82,7 @@ class PID
                                   //   what these values are.  with pointers we'll just know.
 			  
 	unsigned long lastTime;
-	double outputSum, lastInput;
+	double lastInput;
 
 	unsigned long SampleTime;
 	double outMin, outMax;
