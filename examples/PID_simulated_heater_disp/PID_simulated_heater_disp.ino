@@ -11,10 +11,7 @@
 //  Wokwi https://wokwi.com/projects/357374218559137793
 //  Wokwi https://wokwi.com/projects/356437164264235009
 
-#include "PID_v1.h" // https://github.com/br3ttb/Arduino-PID-Library
-// local copy of .h and .cpp are tweaked to expose the integral per
-// https://github.com/br3ttb/Arduino-PID-Library/pull/133
-#define USE_HACK   // access the PID.outputSum variable
+#include "PID_v1_bc.h" // https://github.com/drf5n/Arduino-PID-Library
 
 //Define Variables we'll be connecting to
 double Setpoint, Input, Output;
@@ -124,9 +121,7 @@ void report(void)
     Serial.print(" CV:");
     Serial.print(Output);
     Serial.print(" Int:");
-#if defined(USE_HACK)
     Serial.print(myPID.outputSum);
-#endif
     Serial.print(' ');
     Serial.println();
   }
@@ -153,9 +148,7 @@ void reportLCD(void)
     lcd.print("  ");
     lcd.setCursor(0,3);
     lcd.print("Int:");
-#if defined(USE_HACK)
     lcd.print(myPID.outputSum,4);
-#endif
     lcd.print(' ');
     lcd.println();
   }
